@@ -1,0 +1,28 @@
+import numpy as np
+
+# Task 2: Generate a random matrix of size 5x5 and then find the minimum and maximum values along each row and column
+
+# Generate a random matrix of size 5x5
+matrix = np.random.rand(5, 5)
+print("Random Matrix:")
+print(matrix)
+
+# Find the minimum values along each row
+min_values_row = np.min(matrix, axis=1)
+print("\nMinimum values along each row:")
+print(min_values_row)
+
+# Find the maximum values along each row
+max_values_row = np.max(matrix, axis=1)
+print("\nMaximum values along each row:")
+print(max_values_row)
+
+# Find the minimum values along each column
+min_values_col = np.min(matrix, axis=0)
+print("\nMinimum values along each column:")
+print(min_values_col)
+
+# Find the maximum values along each column
+max_values_col = np.max(matrix, axis=0)
+print("\nMaximum values along each column:")
+print(max_values_col)
