@@ -1,0 +1,28 @@
+import numpy as np
+
+# Task 3: Implement the function to calculate the cosine similarity between two vectors using NumPy
+
+def cosine_similarity(vector1, vector2):
+    # Ensure the vectors are numpy arrays
+    vector1 = np.array(vector1)
+    vector2 = np.array(vector2)
+    
+    # Calculate the dot product
+    dot_product = np.dot(vector1, vector2)
+    
+    # Calculate the norms of the vectors
+    norm_vector1 = np.linalg.norm(vector1)
+    norm_vector2 = np.linalg.norm(vector2)
+    
+    # Calculate the cosine similarity
+    cosine_sim = dot_product / (norm_vector1 * norm_vector2)
+    
+    return cosine_sim
+
+# Example vectors
+vector1 = np.array([1, 2, 3])
+vector2 = np.array([4, 5, 6])
+
+# Calculate cosine similarity
+cos_sim = cosine_similarity(vector1, vector2)
+print(f"Cosine Similarity: {cos_sim}")
